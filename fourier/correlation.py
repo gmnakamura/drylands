@@ -12,7 +12,7 @@ plt.rc('text', usetex=True)
 folder, num_bins = helper.arguments()
 images = helper.scan_folder(folder)
 for raw_image,image_name in images:
-    image      = raw_image.copy() / np.max(raw_image) # 0 < image < 1
+    image      = cv2.bitwise_not(raw_image) / np.max(raw_image) # 0 < image < 1
     image_fft  = np.fft.fft2(image)
     power      = image_fft*np.conj(image_fft)
     correlation= np.real(np.fft.ifft2(power))/image.size
