@@ -96,6 +96,24 @@ def arguments():
     args=vars(parser.parse_args())
     return args['folder'],int(args['number_bins'])
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     # test ::1 scan_folder
     images = scan_folder('/home/gilberto/Documentos/posdoc/drylands/numerical/imagens_binarizadas/')
